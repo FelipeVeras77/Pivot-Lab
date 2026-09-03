@@ -1,0 +1,322 @@
+/* =============================================================================
+   ArtLivre · base.css
+   Tokens de design, reset, tipografia, atmosfera e tema claro/escuro.
+
+   DIREÇÃO VISUAL — "holo lab"
+     Superfícies de vidro sobre um fundo profundo com aurora e malha técnica.
+     Acento em degradê ciano → violeta; brilho no lugar da sombra pesada.
+
+   PALETA
+     papel  = fundo   ·  tinta = texto  ·  traco = hairlines
+     acento = ciano (primário) · acento-2 = violeta · acento-3 = teal
+     ok     = verde  (só semântico: apoio confirmado / meta batida)
+
+   FORMA
+     botões e chips = 11px  ·  campos = 11px  ·  cartões = 16px  ·  painéis = 22px
+     pílula só em avatares, selos e trilhos
+
+   MOVIMENTO
+     --ease padrão iOS-like · --dur 200ms · tudo zera em prefers-reduced-motion
+   ========================================================================== */
+
+:root {
+  /* ---- cor: tema claro "lab" (base) ---- */
+  --papel:        #eaeef7;
+  --papel-2:      #ffffff;
+  --papel-3:      #e0e7f4;
+  --papel-vidro:  rgba(255, 255, 255, .72);
+  --vidro-borda:  rgba(255, 255, 255, .9);
+
+  --tinta:        #08101f;
+  --tinta-2:      #4a5877;
+  --tinta-3:      #7d8ba9;
+
+  --traco:        rgba(14, 32, 78, .10);
+  --traco-2:      rgba(14, 32, 78, .19);
+
+  --acento:       #1f56ff;
+  --acento-2:     #7a2bff;
+  --acento-3:     #00a8c8;
+  --acento-tinta: #1642cc;
+  --acento-suave: rgba(31, 86, 255, .10);
+  --acento-cor-texto: #ffffff;
+
+  --ok:           #059669;
+  --ok-suave:     rgba(5, 150, 105, .12);
+  --alerta:       #d92d5a;
+  --alerta-suave: rgba(217, 45, 90, .11);
+  --ouro:         #b98c17;
+
+  /* ---- atmosfera (aurora + malha) ---- */
+  --aurora-1:  rgba(31, 86, 255, .20);
+  --aurora-2:  rgba(122, 43, 255, .16);
+  --aurora-3:  rgba(0, 168, 200, .16);
+  --malha:     rgba(14, 32, 78, .055);
+  --malha-passo: 56px;
+
+  --sombra-rgb: 10 24 60;
+  --sombra-s:  0 1px 2px rgba(var(--sombra-rgb) / .07), 0 2px 10px rgba(var(--sombra-rgb) / .06);
+  --sombra-m:  0 2px 8px rgba(var(--sombra-rgb) / .07), 0 16px 40px rgba(var(--sombra-rgb) / .12);
+  --sombra-l:  0 10px 26px rgba(var(--sombra-rgb) / .12), 0 40px 90px rgba(var(--sombra-rgb) / .20);
+
+  color-scheme: light;
+}
+
+/* tokens derivados — valem nos dois temas */
+:root {
+  --grad-marca:  linear-gradient(120deg, var(--acento-3) 0%, var(--acento) 48%, var(--acento-2) 100%);
+  --grad-sutil:  linear-gradient(120deg,
+                   color-mix(in srgb, var(--acento-3) 16%, transparent),
+                   color-mix(in srgb, var(--acento-2) 16%, transparent));
+  --brilho-s:    0 0 0 1px color-mix(in srgb, var(--acento) 26%, transparent),
+                 0 6px 22px -8px color-mix(in srgb, var(--acento) 60%, transparent);
+  --brilho-m:    0 0 0 1px color-mix(in srgb, var(--acento) 34%, transparent),
+                 0 10px 36px -10px color-mix(in srgb, var(--acento) 70%, transparent);
+  --borda-viva:  1px solid color-mix(in srgb, var(--acento) 34%, var(--traco-2));
+
+  /* ---- tipografia ---- */
+  --f-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --f-corpo:   "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-serif:   "Space Grotesk", "Inter", system-ui, sans-serif;
+  --f-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* ---- forma ---- */
+  --r-campo:  11px;
+  --r-btn:    11px;
+  --r-card:   16px;
+  --r-painel: 22px;
+  --r-pill:   999px;
+
+  /* ---- movimento ---- */
+  --ease:  cubic-bezier(.32, .72, 0, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --dur:   200ms;
+  --dur-l: 480ms;
+
+  /* ---- casca ---- */
+  --side-w:      252px;
+  --side-w-mini: 80px;
+  --tela-max:    1240px;
+  --player-h:    70px;
+}
+/* ---- tema escuro: preferência do SO (quando não há escolha explícita) ---- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel:        #05070e;
+    --papel-2:      rgba(18, 25, 43, .72);
+    --papel-3:      rgba(30, 40, 66, .70);
+    --papel-vidro:  rgba(10, 14, 26, .74);
+    --vidro-borda:  rgba(150, 190, 255, .16);
+
+    --tinta:        #e9eefb;
+    --tinta-2:      #9aa8c6;
+    --tinta-3:      #626f8d;
+
+    --traco:        rgba(140, 175, 255, .13);
+    --traco-2:      rgba(140, 175, 255, .24);
+
+    --acento:       #4fdcff;
+    --acento-2:     #a97cff;
+    --acento-3:     #3ee0bf;
+    --acento-tinta: #8ae9ff;
+    --acento-suave: rgba(79, 220, 255, .13);
+    --acento-cor-texto: #03121a;
+
+    --ok:           #2fe0a4;
+    --ok-suave:     rgba(47, 224, 164, .12);
+    --alerta:       #ff617f;
+    --alerta-suave: rgba(255, 97, 127, .12);
+    --ouro:         #f0c66b;
+
+    --aurora-1:  rgba(56, 132, 255, .30);
+    --aurora-2:  rgba(150, 70, 255, .26);
+    --aurora-3:  rgba(0, 220, 200, .18);
+    --malha:     rgba(140, 180, 255, .085);
+
+    --sombra-rgb: 0 0 0;
+    --sombra-s:  0 1px 2px rgba(0 0 0 / .40);
+    --sombra-m:  0 2px 10px rgba(0 0 0 / .45), 0 18px 44px rgba(0 0 0 / .50);
+    --sombra-l:  0 12px 34px rgba(0 0 0 / .55), 0 46px 100px rgba(0 0 0 / .70);
+
+    color-scheme: dark;
+  }
+}
+
+/* ---- tema escuro: escolha explícita do usuário (ganha dos dois lados) ---- */
+:root[data-theme="dark"] {
+  --papel:        #05070e;
+  --papel-2:      rgba(18, 25, 43, .72);
+  --papel-3:      rgba(30, 40, 66, .70);
+  --papel-vidro:  rgba(10, 14, 26, .74);
+  --vidro-borda:  rgba(150, 190, 255, .16);
+
+  --tinta:        #e9eefb;
+  --tinta-2:      #9aa8c6;
+  --tinta-3:      #626f8d;
+
+  --traco:        rgba(140, 175, 255, .13);
+  --traco-2:      rgba(140, 175, 255, .24);
+
+  --acento:       #4fdcff;
+  --acento-2:     #a97cff;
+  --acento-3:     #3ee0bf;
+  --acento-tinta: #8ae9ff;
+  --acento-suave: rgba(79, 220, 255, .13);
+  --acento-cor-texto: #03121a;
+
+  --ok:           #2fe0a4;
+  --ok-suave:     rgba(47, 224, 164, .12);
+  --alerta:       #ff617f;
+  --alerta-suave: rgba(255, 97, 127, .12);
+  --ouro:         #f0c66b;
+
+  --aurora-1:  rgba(56, 132, 255, .30);
+  --aurora-2:  rgba(150, 70, 255, .26);
+  --aurora-3:  rgba(0, 220, 200, .18);
+  --malha:     rgba(140, 180, 255, .085);
+
+  --sombra-rgb: 0 0 0;
+  --sombra-s:  0 1px 2px rgba(0 0 0 / .40);
+  --sombra-m:  0 2px 10px rgba(0 0 0 / .45), 0 18px 44px rgba(0 0 0 / .50);
+  --sombra-l:  0 12px 34px rgba(0 0 0 / .55), 0 46px 100px rgba(0 0 0 / .70);
+
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
+
+/* ============================ reset enxuto ============================ */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  position: relative;
+  font-family: var(--f-corpo);
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--tinta);
+  background: var(--papel);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* ---- atmosfera 1: aurora que respira atrás de tudo ---- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20vmax;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(38vmax 30vmax at 12% -4%,  var(--aurora-1), transparent 62%),
+    radial-gradient(34vmax 30vmax at 88% 6%,   var(--aurora-2), transparent 60%),
+    radial-gradient(40vmax 34vmax at 62% 104%, var(--aurora-3), transparent 62%);
+  filter: blur(18px) saturate(1.15);
+  animation: aurora 26s var(--ease) infinite alternate;
+}
+@keyframes aurora {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-2.5%, 1.6%, 0) scale(1.07); }
+  100% { transform: translate3d(2%, -2%, 0) scale(1.03); }
+}
+
+/* ---- atmosfera 2: malha técnica com vinheta ---- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right,  var(--malha) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--malha) 1px, transparent 1px);
+  background-size: var(--malha-passo) var(--malha-passo);
+  -webkit-mask-image: radial-gradient(130% 100% at 50% 0%, #000 20%, transparent 78%);
+          mask-image: radial-gradient(130% 100% at 50% 0%, #000 20%, transparent 78%);
+}
+
+img, picture, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; padding: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+::selection { background: color-mix(in srgb, var(--acento) 40%, transparent); color: var(--tinta); }
+
+body.trava-scroll { overflow: hidden; }
+
+/* barra de rolagem discreta, no tom do tema */
+* { scrollbar-width: thin; scrollbar-color: var(--traco-2) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: var(--traco-2);
+  border-radius: var(--r-pill);
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--tinta-3); background-clip: content-box; }
+
+/* ============================ tipografia ============================ */
+h1, h2, h3, h4 {
+  font-family: var(--f-display);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  color: var(--tinta);
+}
+h1 { font-size: clamp(1.75rem, 1.2rem + 2.1vw, 2.6rem); font-weight: 700; }
+h2 { font-size: clamp(1.35rem, 1rem + 1.4vw, 1.95rem); }
+h3 { font-size: 1.1rem; letter-spacing: -.018em; }
+p  { text-wrap: pretty; }
+small { font-size: .82em; }
+code, kbd { font-family: var(--f-mono); }
+
+.link { color: var(--acento); font-weight: 600; }
+.link:hover { color: var(--acento-tinta); }
+
+/* rótulo técnico monoespaçado — assinatura tipográfica da interface */
+.olho {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--f-mono);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--tinta-3);
+}
+
+/* texto pintado com o degradê da marca */
+.gradiente {
+  background: var(--grad-marca);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+/* números tabulares onde importa (métricas, dinheiro, tempo) */
+.kpi__val, .meter__valor, .hero__num strong, .perfil__stats strong,
+.player__tempo, .aplayer__tempo, .pix__code, .cx text { font-variant-numeric: tabular-nums; }
+
+/* ============================ animações base ============================ */
+@keyframes sobe-suave { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes pulsa-luz  { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+@keyframes varredura  { from { transform: translateX(-120%); } to { transform: translateX(220%); } }
+@keyframes gira-lento { to { transform: rotate(1turn); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

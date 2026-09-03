@@ -1,0 +1,78 @@
+{
+  "_comment": "Mock de apoiadores e séries de desempenho para o Dashboard do Criador. Sem endpoint público único: alimenta a visão privada do artista (agregados de GET /api/v1/artists/{id} + relatórios internos).",
+  "supporters": [
+    { "id": "sup-001", "nome": "Renata Alvim", "avatar": "https://picsum.photos/seed/artlivre-s-renata/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-ouro", "valor": 50, "data": "2026-08-02" },
+    { "id": "sup-002", "nome": "João Bteshe", "avatar": "https://picsum.photos/seed/artlivre-s-joao/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-prata", "valor": 25, "data": "2026-08-03" },
+    { "id": "sup-003", "nome": "Coletivo Sul", "avatar": "https://picsum.photos/seed/artlivre-s-sul/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-prata", "valor": 25, "data": "2026-08-05" },
+    { "id": "sup-004", "nome": "Priscila Nery", "avatar": "https://picsum.photos/seed/artlivre-s-priscila/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-bronze", "valor": 10, "data": "2026-08-06" },
+    { "id": "sup-005", "nome": "Editora Arquipélago", "avatar": "https://picsum.photos/seed/artlivre-s-arqui/80/80", "artistId": "marina-torres", "tipo": "pontual", "tierId": null, "valor": 120, "data": "2026-08-08" },
+    { "id": "sup-006", "nome": "Tiago Menezes", "avatar": "https://picsum.photos/seed/artlivre-s-tiago/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-bronze", "valor": 10, "data": "2026-08-09" },
+    { "id": "sup-007", "nome": "Ana Clara Pó", "avatar": "https://picsum.photos/seed/artlivre-s-anaclara/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-ouro", "valor": 50, "data": "2026-08-12" },
+    { "id": "sup-008", "nome": "Zine Club BH", "avatar": "https://picsum.photos/seed/artlivre-s-zineclub/80/80", "artistId": "marina-torres", "tipo": "pontual", "tierId": null, "valor": 35, "data": "2026-08-14" },
+    { "id": "sup-009", "nome": "Marcos Vinícius", "avatar": "https://picsum.photos/seed/artlivre-s-marcos/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-prata", "valor": 25, "data": "2026-08-16" },
+    { "id": "sup-010", "nome": "Luiza Sampaio", "avatar": "https://picsum.photos/seed/artlivre-s-luiza/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-bronze", "valor": 10, "data": "2026-08-19" },
+    { "id": "sup-011", "nome": "Estúdio Lampião", "avatar": "https://picsum.photos/seed/artlivre-s-lampiao/80/80", "artistId": "marina-torres", "tipo": "mensal", "tierId": "marina-ouro", "valor": 50, "data": "2026-08-22" },
+    { "id": "sup-012", "nome": "Bruna Tavares", "avatar": "https://picsum.photos/seed/artlivre-s-bruna/80/80", "artistId": "marina-torres", "tipo": "pontual", "tierId": null, "valor": 25, "data": "2026-08-24" },
+
+    { "id": "sup-020", "nome": "DJ Aurora", "avatar": "https://picsum.photos/seed/artlivre-s-aurora/80/80", "artistId": "beto-cravo", "tipo": "mensal", "tierId": "beto-prata", "valor": 25, "data": "2026-08-04" },
+    { "id": "sup-021", "nome": "Cais Companhia", "avatar": "https://picsum.photos/seed/artlivre-s-cais/80/80", "artistId": "beto-cravo", "tipo": "mensal", "tierId": "beto-ouro", "valor": 50, "data": "2026-08-07" },
+    { "id": "sup-022", "nome": "Rádio Frevo Web", "avatar": "https://picsum.photos/seed/artlivre-s-radiofrevo/80/80", "artistId": "beto-cravo", "tipo": "mensal", "tierId": "beto-bronze", "valor": 10, "data": "2026-08-10" },
+    { "id": "sup-023", "nome": "Helena Rios", "avatar": "https://picsum.photos/seed/artlivre-s-helena/80/80", "artistId": "beto-cravo", "tipo": "pontual", "tierId": null, "valor": 40, "data": "2026-08-15" },
+    { "id": "sup-024", "nome": "Coletivo Baque", "avatar": "https://picsum.photos/seed/artlivre-s-baque/80/80", "artistId": "beto-cravo", "tipo": "mensal", "tierId": "beto-prata", "valor": 25, "data": "2026-08-18" },
+
+    { "id": "sup-030", "nome": "Coletivo Analógico", "avatar": "https://picsum.photos/seed/artlivre-s-analogico/80/80", "artistId": "lia-santanna", "tipo": "mensal", "tierId": "lia-prata", "valor": 25, "data": "2026-08-03" },
+    { "id": "sup-031", "nome": "Galeria Ladeira", "avatar": "https://picsum.photos/seed/artlivre-s-ladeira/80/80", "artistId": "lia-santanna", "tipo": "mensal", "tierId": "lia-ouro", "valor": 50, "data": "2026-08-09" },
+    { "id": "sup-032", "nome": "Pedro Sacramento", "avatar": "https://picsum.photos/seed/artlivre-s-pedro/80/80", "artistId": "lia-santanna", "tipo": "mensal", "tierId": "lia-bronze", "valor": 10, "data": "2026-08-13" },
+    { "id": "sup-033", "nome": "Revista ZUM (leitor)", "avatar": "https://picsum.photos/seed/artlivre-s-zum/80/80", "artistId": "lia-santanna", "tipo": "pontual", "tierId": null, "valor": 30, "data": "2026-08-20" },
+
+    { "id": "sup-040", "nome": "Casa Terra", "avatar": "https://picsum.photos/seed/artlivre-s-casaterra/80/80", "artistId": "oficina-carua", "tipo": "mensal", "tierId": "carua-ouro", "valor": 50, "data": "2026-08-05" },
+    { "id": "sup-041", "nome": "Escola Vila do Barro", "avatar": "https://picsum.photos/seed/artlivre-s-vila/80/80", "artistId": "oficina-carua", "tipo": "mensal", "tierId": "carua-prata", "valor": 25, "data": "2026-08-11" },
+    { "id": "sup-042", "nome": "Dora Antunes", "avatar": "https://picsum.photos/seed/artlivre-s-dora/80/80", "artistId": "oficina-carua", "tipo": "mensal", "tierId": "carua-bronze", "valor": 10, "data": "2026-08-17" },
+
+    { "id": "sup-050", "nome": "Nthrop", "avatar": "https://picsum.photos/seed/artlivre-s-nthrop/80/80", "artistId": "nuno-prado", "tipo": "mensal", "tierId": "nuno-ouro", "valor": 50, "data": "2026-08-02" },
+    { "id": "sup-051", "nome": "Editora Arquipélago", "avatar": "https://picsum.photos/seed/artlivre-s-arqui2/80/80", "artistId": "nuno-prado", "tipo": "mensal", "tierId": "nuno-prata", "valor": 25, "data": "2026-08-08" },
+    { "id": "sup-052", "nome": "Casa de Show Ocidente", "avatar": "https://picsum.photos/seed/artlivre-s-ocidente/80/80", "artistId": "nuno-prado", "tipo": "mensal", "tierId": "nuno-prata", "valor": 25, "data": "2026-08-16" },
+
+    { "id": "sup-060", "nome": "Livraria da Esquina", "avatar": "https://picsum.photos/seed/artlivre-s-livraria/80/80", "artistId": "clarice-vidal", "tipo": "mensal", "tierId": "clarice-ouro", "valor": 50, "data": "2026-08-06" },
+    { "id": "sup-061", "nome": "Oficina de Escrita BH", "avatar": "https://picsum.photos/seed/artlivre-s-oficina/80/80", "artistId": "clarice-vidal", "tipo": "mensal", "tierId": "clarice-prata", "valor": 25, "data": "2026-08-12" },
+    { "id": "sup-062", "nome": "Camila Drummond", "avatar": "https://picsum.photos/seed/artlivre-s-camila/80/80", "artistId": "clarice-vidal", "tipo": "mensal", "tierId": "clarice-bronze", "valor": 10, "data": "2026-08-21" }
+  ],
+  "desempenho": {
+    "marina-torres": {
+      "meses": ["Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+      "arrecadacao": [2380, 2610, 3050, 3420, 3880, 4120],
+      "visitas": [1120, 1340, 1610, 1490, 1880, 2260],
+      "novosApoiadores": [9, 12, 15, 11, 18, 21]
+    },
+    "beto-cravo": {
+      "meses": ["Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+      "arrecadacao": [4900, 5200, 5400, 5850, 6100, 6570],
+      "visitas": [2600, 2810, 3050, 2990, 3400, 3720],
+      "novosApoiadores": [14, 16, 11, 19, 17, 24]
+    },
+    "lia-santanna": {
+      "meses": ["Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+      "arrecadacao": [1450, 1560, 1720, 1900, 2080, 2280],
+      "visitas": [720, 810, 940, 880, 1050, 1180],
+      "novosApoiadores": [5, 7, 6, 8, 9, 11]
+    },
+    "oficina-carua": {
+      "meses": ["Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+      "arrecadacao": [2600, 2850, 3100, 3400, 3700, 3960],
+      "visitas": [620, 690, 780, 810, 900, 1010],
+      "novosApoiadores": [7, 9, 8, 10, 12, 13]
+    },
+    "nuno-prado": {
+      "meses": ["Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+      "arrecadacao": [3900, 4200, 4400, 4650, 4900, 5230],
+      "visitas": [1400, 1520, 1680, 1610, 1820, 1990],
+      "novosApoiadores": [11, 13, 9, 15, 14, 18]
+    },
+    "clarice-vidal": {
+      "meses": ["Mar", "Abr", "Mai", "Jun", "Jul", "Ago"],
+      "arrecadacao": [780, 940, 1120, 1300, 1520, 1740],
+      "visitas": [430, 510, 600, 640, 730, 860],
+      "novosApoiadores": [4, 6, 5, 7, 8, 10]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#05070E" />
+  <meta name="description" content="ArtLivre — vitrine de portfólios e apoio recorrente a artistas independentes brasileiros. Protótipo de front-end." />
+  <title>ArtLivre</title>
+
+  <!-- Fontes: display (Space Grotesk), corpo (Inter) e
+       dados/rótulos técnicos/Pix (JetBrains Mono). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Font Awesome 6 free — inclui marcas p/ redes sociais) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Estilos ArtLivre (ordem: base -> layout -> componentes -> telas).
+       Suba o "?v=" ao editar para furar o cache ao abrir por file://. -->
+  <link rel="stylesheet" href="css/base.css?v=3" />
+  <link rel="stylesheet" href="css/layout.css?v=3" />
+  <link rel="stylesheet" href="css/components.css?v=3" />
+  <link rel="stylesheet" href="css/screens.css?v=3" />
+</head>
+<body>
+  <!-- Toda a interface é renderizada aqui pelo JavaScript. -->
+  <div id="app" aria-live="polite">Carregando a ArtLivre…</div>
+
+  <!--
+    Scripts clássicos (sem módulos) para rodar por file:// sem servidor.
+    Ordem: data -> state -> player -> checkout -> app (inicializa).
+  -->
+  <script src="js/data.js?v=3"></script>
+  <script src="js/state.js?v=3"></script>
+  <script src="js/player.js?v=3"></script>
+  <script src="js/checkout.js?v=3"></script>
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>
