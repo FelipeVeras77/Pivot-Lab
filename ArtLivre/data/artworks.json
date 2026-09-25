@@ -1,0 +1,304 @@
+{
+  "_comment": "Mock do acervo de obras da ArtLivre. Contrato equivalente a GET /api/v1/artworks (paginação, busca por texto, filtro por categoria). O runtime lê js/data.js.",
+  "artworks": [
+    {
+      "id": "obra-marina-01",
+      "artistId": "marina-torres",
+      "titulo": "Santa do Quintal",
+      "descricao": "Estudo em risografia de duas cores para a capa de uma fanzine sobre religiosidade popular no interior paulista. A auréola é um prato de esmalte descascado.",
+      "categoria": "ilustracao",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-marina-01/1000/1300",
+      "thumb": "https://picsum.photos/seed/artlivre-marina-01/600/780",
+      "curtidas": 412,
+      "apoiadores": 31,
+      "dataCriacao": "2026-08-14",
+      "tags": ["risografia", "folk", "duas cores", "capa"],
+      "comentarios": [
+        { "autor": "Renata Alvim", "avatar": "https://picsum.photos/seed/artlivre-c-renata/80/80", "texto": "A textura do azul ficou linda, parece parede de igreja de roça.", "data": "2026-08-15" },
+        { "autor": "Design Coletivo Sul", "avatar": "https://picsum.photos/seed/artlivre-c-dcs/80/80", "texto": "Usaríamos numa camiseta na hora. Vende o arquivo?", "data": "2026-08-16" }
+      ]
+    },
+    {
+      "id": "obra-marina-02",
+      "artistId": "marina-torres",
+      "titulo": "Rota da Feira",
+      "descricao": "Mapa ilustrado de uma feira livre imaginária. Cada barraca é uma vinheta com cheiro próprio. Feito para um projeto editorial que não saiu do papel, agora liberado aqui.",
+      "categoria": "ilustracao",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-marina-02/1200/900",
+      "thumb": "https://picsum.photos/seed/artlivre-marina-02/700/525",
+      "curtidas": 287,
+      "apoiadores": 22,
+      "dataCriacao": "2026-07-30",
+      "tags": ["mapa ilustrado", "editorial", "vinhetas"],
+      "comentarios": [
+        { "autor": "João Bteshe", "avatar": "https://picsum.photos/seed/artlivre-c-joao/80/80", "texto": "O detalhe do carrinho de milho no canto me pegou.", "data": "2026-07-31" }
+      ]
+    },
+    {
+      "id": "obra-marina-03",
+      "artistId": "marina-torres",
+      "titulo": "Antena e Jabuticaba",
+      "descricao": "Pintura digital da série folk-futurismo: uma torre de transmissão brotando de um pé de jabuticaba. Print exclusivo do mês para o nível Ouro.",
+      "categoria": "ilustracao",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-marina-03/1000/1250",
+      "thumb": "https://picsum.photos/seed/artlivre-marina-03/600/750",
+      "curtidas": 531,
+      "apoiadores": 44,
+      "dataCriacao": "2026-08-02",
+      "tags": ["folk-futurismo", "pintura digital", "print do mês"],
+      "comentarios": []
+    },
+    {
+      "id": "obra-beto-01",
+      "artistId": "beto-cravo",
+      "titulo": "Maré de Sizígia",
+      "descricao": "Faixa do mês. Alfaia gravada na laje, sintetizador modular e um sample de rádio pesqueiro de Brasília Teimosa. Stems disponíveis para o nível Sala de Controle.",
+      "categoria": "musica",
+      "tipoMidia": "audio",
+      "urlMidia": "",
+      "thumb": "https://picsum.photos/seed/artlivre-beto-01/700/700",
+      "duracao": 214,
+      "curtidas": 689,
+      "apoiadores": 73,
+      "dataCriacao": "2026-08-20",
+      "tags": ["manguebeat", "modular", "faixa do mês"],
+      "comentarios": [
+        { "autor": "DJ Aurora", "avatar": "https://picsum.photos/seed/artlivre-c-aurora/80/80", "texto": "Esse kick com a alfaia por cima é um crime (elogio). Já quero remixar.", "data": "2026-08-21" },
+        { "autor": "Cais Companhia", "avatar": "https://picsum.photos/seed/artlivre-c-cais/80/80", "texto": "Serviria demais pra abertura do próximo espetáculo.", "data": "2026-08-22" }
+      ]
+    },
+    {
+      "id": "obra-beto-02",
+      "artistId": "beto-cravo",
+      "titulo": "Estudo de Alfaia nº 4",
+      "descricao": "Esboço rítmico de 90 segundos. Só percussão e um pad. Publico esses estudos crus para quem acompanha o processo.",
+      "categoria": "musica",
+      "tipoMidia": "audio",
+      "urlMidia": "",
+      "thumb": "https://picsum.photos/seed/artlivre-beto-02/700/700",
+      "duracao": 92,
+      "curtidas": 176,
+      "apoiadores": 12,
+      "dataCriacao": "2026-08-05",
+      "tags": ["estudo", "percussão", "bastidor"],
+      "comentarios": [
+        { "autor": "Marina Tôrres", "avatar": "https://picsum.photos/seed/artlivre-marina-avatar/80/80", "texto": "Desenhei ouvindo isso em loop. Combina com barro.", "data": "2026-08-06" }
+      ]
+    },
+    {
+      "id": "obra-beto-03",
+      "artistId": "beto-cravo",
+      "titulo": "Enseada (Ao Vivo no Estúdio)",
+      "descricao": "Regravação ao vivo, banda de sete pessoas amontoada na sala. Um take só, com o erro do baixo no minuto 2 que a gente decidiu manter.",
+      "categoria": "musica",
+      "tipoMidia": "audio",
+      "urlMidia": "",
+      "thumb": "https://picsum.photos/seed/artlivre-beto-03/700/700",
+      "duracao": 268,
+      "curtidas": 344,
+      "apoiadores": 39,
+      "dataCriacao": "2026-07-18",
+      "tags": ["ao vivo", "banda", "take único"],
+      "comentarios": []
+    },
+    {
+      "id": "obra-lia-01",
+      "artistId": "lia-santanna",
+      "titulo": "Depois do Coreto, 6h47",
+      "descricao": "Praça Municipal vazia antes do sol subir. Filme vencido, revelado empurrando dois pontos. A varredora entrou no quadro sem eu pedir.",
+      "categoria": "fotografia",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-lia-01/1100/1400",
+      "thumb": "https://picsum.photos/seed/artlivre-lia-01/620/790",
+      "curtidas": 298,
+      "apoiadores": 18,
+      "dataCriacao": "2026-08-11",
+      "tags": ["35mm", "filme vencido", "Salvador", "amanhecer"],
+      "comentarios": [
+        { "autor": "Coletivo Analógico", "avatar": "https://picsum.photos/seed/artlivre-c-analogico/80/80", "texto": "O grão nessa foto vale mais que qualquer filtro.", "data": "2026-08-12" }
+      ]
+    },
+    {
+      "id": "obra-lia-02",
+      "artistId": "lia-santanna",
+      "titulo": "Ganhadeira, Feira de São Joaquim",
+      "descricao": "Retrato de Dona Nici entre os balaios. Fiz três cópias impressas: uma pra ela, uma pro arquivo, essa é a digital que fica pros apoiadores.",
+      "categoria": "fotografia",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-lia-02/1000/1250",
+      "thumb": "https://picsum.photos/seed/artlivre-lia-02/600/750",
+      "curtidas": 461,
+      "apoiadores": 27,
+      "dataCriacao": "2026-07-25",
+      "tags": ["retrato", "feira", "documental"],
+      "comentarios": []
+    },
+    {
+      "id": "obra-lia-03",
+      "artistId": "lia-santanna",
+      "titulo": "Recôncavo, Janela do Ferry",
+      "descricao": "Travessia Salvador–Mar Grande. A mão no vidro é de um menino que passou a viagem inteira contando os barcos.",
+      "categoria": "fotografia",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-lia-03/1200/860",
+      "thumb": "https://picsum.photos/seed/artlivre-lia-03/700/500",
+      "curtidas": 209,
+      "apoiadores": 14,
+      "dataCriacao": "2026-08-18",
+      "tags": ["travessia", "Recôncavo", "35mm"],
+      "comentarios": [
+        { "autor": "Nuno Prado", "avatar": "https://picsum.photos/seed/artlivre-nuno-avatar/80/80", "texto": "Essa luz na água é de encomenda. Quero num cartaz.", "data": "2026-08-19" }
+      ]
+    },
+    {
+      "id": "obra-carua-01",
+      "artistId": "oficina-carua",
+      "titulo": "Alguidar com Grafismo de Onça",
+      "descricao": "Peça utilitária de 28 cm, engobe preto de manganês sobre barro claro. O grafismo é releitura de um padrão marajoara de cerâmica funerária.",
+      "categoria": "artesanato",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-carua-01/1000/1000",
+      "thumb": "https://picsum.photos/seed/artlivre-carua-01/620/620",
+      "curtidas": 377,
+      "apoiadores": 29,
+      "dataCriacao": "2026-08-09",
+      "tags": ["cerâmica", "marajoara", "engobe", "utilitário"],
+      "comentarios": [
+        { "autor": "Casa Terra", "avatar": "https://picsum.photos/seed/artlivre-c-casaterra/80/80", "texto": "Entra na lista de espera de quantas peças?", "data": "2026-08-10" }
+      ]
+    },
+    {
+      "id": "obra-carua-02",
+      "artistId": "oficina-carua",
+      "titulo": "Luminária Tucumã nº 12",
+      "descricao": "Fibra de tucumã trançada sobre estrutura de metal, soquete E27. A sombra que ela joga na parede é metade do trabalho.",
+      "categoria": "artesanato",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-carua-02/1000/1300",
+      "thumb": "https://picsum.photos/seed/artlivre-carua-02/600/780",
+      "curtidas": 512,
+      "apoiadores": 41,
+      "dataCriacao": "2026-07-21",
+      "tags": ["fibra", "tucumã", "luminária", "trançado"],
+      "comentarios": []
+    },
+    {
+      "id": "obra-carua-03",
+      "artistId": "oficina-carua",
+      "titulo": "Turma de Oficina, Queima nº 30",
+      "descricao": "Registro da queima coletiva com a primeira turma de adolescentes do bairro. Cada um fez a própria caneca. Nenhuma quebrou no forno.",
+      "categoria": "artesanato",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-carua-03/1200/900",
+      "thumb": "https://picsum.photos/seed/artlivre-carua-03/700/525",
+      "curtidas": 244,
+      "apoiadores": 33,
+      "dataCriacao": "2026-08-17",
+      "tags": ["oficina", "comunidade", "forno", "Icoaraci"],
+      "comentarios": [
+        { "autor": "Clarice Vidal", "avatar": "https://picsum.photos/seed/artlivre-clarice-avatar/80/80", "texto": "Isso aqui é o melhor uso possível do dinheiro de apoio.", "data": "2026-08-18" }
+      ]
+    },
+    {
+      "id": "obra-nuno-01",
+      "artistId": "nuno-prado",
+      "titulo": "Cartaz: Nthrop Festival, Noite 2",
+      "descricao": "Cartaz A2 risografado em três cores. A tipografia é a Minuano em peso experimental, ainda não lançada. Arquivo CMYK para o nível Arquivo Aberto.",
+      "categoria": "design",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-nuno-01/1000/1414",
+      "thumb": "https://picsum.photos/seed/artlivre-nuno-01/600/848",
+      "curtidas": 466,
+      "apoiadores": 52,
+      "dataCriacao": "2026-08-13",
+      "tags": ["cartaz", "risografia", "tipografia", "festival"],
+      "comentarios": [
+        { "autor": "Nthrop", "avatar": "https://picsum.photos/seed/artlivre-c-nthrop/80/80", "texto": "Terceira edição seguida e ainda melhora. Já pregamos na porta.", "data": "2026-08-14" }
+      ]
+    },
+    {
+      "id": "obra-nuno-02",
+      "artistId": "nuno-prado",
+      "titulo": "Specimen Minuano, Prova 07",
+      "descricao": "Página de specimen mostrando a Minuano do peso Fino ao Preto. Ainda ajustando o 'g' de descida e o espaçamento do versalete.",
+      "categoria": "design",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-nuno-02/1200/900",
+      "thumb": "https://picsum.photos/seed/artlivre-nuno-02/700/525",
+      "curtidas": 189,
+      "apoiadores": 24,
+      "dataCriacao": "2026-07-28",
+      "tags": ["specimen", "type design", "processo"],
+      "comentarios": []
+    },
+    {
+      "id": "obra-nuno-03",
+      "artistId": "nuno-prado",
+      "titulo": "Wallpaper Tipográfico: Agosto",
+      "descricao": "Composição só com a palavra 'teimosia' repetida em três pesos. Wallpaper do mês para todos os níveis, em resoluções de desktop e celular.",
+      "categoria": "design",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-nuno-03/1400/900",
+      "thumb": "https://picsum.photos/seed/artlivre-nuno-03/700/450",
+      "curtidas": 301,
+      "apoiadores": 61,
+      "dataCriacao": "2026-08-01",
+      "tags": ["wallpaper", "lettering", "brinde mensal"],
+      "comentarios": [
+        { "autor": "Beto Cravo", "avatar": "https://picsum.photos/seed/artlivre-beto-avatar/80/80", "texto": "Botei no telefone e no laptop. Combina com o disco novo.", "data": "2026-08-02" }
+      ]
+    },
+    {
+      "id": "obra-clarice-01",
+      "artistId": "clarice-vidal",
+      "titulo": "O Bairro que Anda — Capítulo 9",
+      "descricao": "A linha 9201 muda de itinerário toda vez que chove. Nesse capítulo, a Bete descobre por quê. Conto de 3.400 palavras, PDF e ePub.",
+      "categoria": "literatura",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-clarice-01/1000/1300",
+      "thumb": "https://picsum.photos/seed/artlivre-clarice-01/600/780",
+      "curtidas": 254,
+      "apoiadores": 47,
+      "dataCriacao": "2026-08-19",
+      "tags": ["ficção seriada", "fantástico", "Belo Horizonte"],
+      "comentarios": [
+        { "autor": "Livraria da Esquina", "avatar": "https://picsum.photos/seed/artlivre-c-livraria/80/80", "texto": "Cada capítulo desses pede uma edição impressa. Segura essa série.", "data": "2026-08-20" }
+      ]
+    },
+    {
+      "id": "obra-clarice-02",
+      "artistId": "clarice-vidal",
+      "titulo": "Zine 'Linhas Mortas' — Miolo",
+      "descricao": "Spread do miolo da zine trimestral, diagramado à mão sobre papel pólen. Quatro contos curtos e um mapa dobrável de ônibus fantasma.",
+      "categoria": "literatura",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-clarice-02/1200/850",
+      "thumb": "https://picsum.photos/seed/artlivre-clarice-02/700/495",
+      "curtidas": 167,
+      "apoiadores": 19,
+      "dataCriacao": "2026-07-15",
+      "tags": ["zine", "impresso", "diagramação"],
+      "comentarios": []
+    },
+    {
+      "id": "obra-clarice-03",
+      "artistId": "clarice-vidal",
+      "titulo": "Versão Comentada — Conto 'Endereço Novo'",
+      "descricao": "O mesmo conto com as marcas de revisão à vista: o que foi cortado, o parágrafo que mudou de lugar três vezes, a frase que a editora odiou.",
+      "categoria": "literatura",
+      "tipoMidia": "imagem",
+      "urlMidia": "https://picsum.photos/seed/artlivre-clarice-03/1000/1200",
+      "thumb": "https://picsum.photos/seed/artlivre-clarice-03/600/720",
+      "curtidas": 142,
+      "apoiadores": 26,
+      "dataCriacao": "2026-08-04",
+      "tags": ["processo", "revisão", "bastidor"],
+      "comentarios": [
+        { "autor": "Oficina de Escrita BH", "avatar": "https://picsum.photos/seed/artlivre-c-oficina/80/80", "texto": "Uso esses comentados na aula. Melhor material sobre revisão que existe.", "data": "2026-08-05" }
+      ]
+    }
+  ]
+}

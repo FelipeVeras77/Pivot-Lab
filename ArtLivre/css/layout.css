@@ -1,0 +1,307 @@
+/* =============================================================================
+   ArtLivre · layout.css
+   Casca da aplicação: rail lateral de vidro (desktop/tablet), barra inferior
+   (mobile), topbar de cada tela, container e grades responsivas.
+
+   Navegação por largura:
+     < 768px   barra inferior flutuante (tabbar), sem rail
+     >= 768px  rail só com ícones
+     >= 1080px rail com rótulos
+   ========================================================================== */
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100dvh;
+}
+
+/* ------------------------------------------------------- rail lateral --- */
+.side { display: none; }
+
+@media (min-width: 768px) {
+  .app { grid-template-columns: var(--side-w-mini) 1fr; }
+
+  .side {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100dvh;
+    padding: 20px 14px 18px;
+    background: var(--papel-vidro);
+    backdrop-filter: blur(22px) saturate(1.4);
+    -webkit-backdrop-filter: blur(22px) saturate(1.4);
+    border-right: 1px solid var(--traco);
+  }
+  /* hairline viva na borda do rail */
+  .side::after {
+    content: "";
+    position: absolute;
+    inset: 0 -1px 0 auto;
+    width: 1px;
+    background: linear-gradient(180deg,
+      transparent,
+      color-mix(in srgb, var(--acento) 45%, transparent) 22%,
+      color-mix(in srgb, var(--acento-2) 40%, transparent) 68%,
+      transparent);
+    opacity: .85;
+    pointer-events: none;
+  }
+
+  /* ---- marca ---- */
+  .side__marca {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 4px 6px 18px;
+  }
+  .side__marca::before {
+    content: "";
+    flex: none;
+    width: 30px; height: 30px;
+    border-radius: 9px;
+    background: var(--grad-marca);
+    box-shadow: 0 6px 18px -6px color-mix(in srgb, var(--acento) 80%, transparent);
+  }
+  .side__marca::after {
+    content: "";
+    position: absolute;
+    left: 16px; top: 15px;
+    width: 9px; height: 9px;
+    border-radius: 2px;
+    background: var(--papel);
+    transform: rotate(45deg);
+  }
+  .side__logo {
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: 1.06rem;
+    letter-spacing: -.03em;
+    color: var(--tinta);
+    white-space: nowrap;
+  }
+  /* no rail estreito fica só a marca gráfica */
+  .side__logo { display: none; }
+  .side__logo span { display: none; }
+
+  /* ---- itens ---- */
+  .side__nav { display: flex; flex-direction: column; gap: 4px; }
+  .side__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 11px 12px;
+    border-radius: var(--r-btn);
+    color: var(--tinta-2);
+    font-weight: 600;
+    font-size: .92rem;
+    border: 1px solid transparent;
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease),
+                border-color var(--dur) var(--ease);
+  }
+  .side__item i { width: 20px; text-align: center; font-size: 1.02rem; }
+  .side__item span { display: none; }
+  .side__item:hover { background: var(--papel-3); color: var(--tinta); }
+
+  .side__item.is-on {
+    color: var(--tinta);
+    background: var(--acento-suave);
+    border-color: color-mix(in srgb, var(--acento) 26%, transparent);
+  }
+  .side__item.is-on i { color: var(--acento); }
+  /* marcador luminoso do item ativo */
+  .side__item.is-on::before {
+    content: "";
+    position: absolute;
+    left: -14px; top: 50%;
+    width: 3px; height: 22px;
+    transform: translateY(-50%);
+    border-radius: 0 3px 3px 0;
+    background: var(--grad-marca);
+    box-shadow: 0 0 14px 1px color-mix(in srgb, var(--acento) 75%, transparent);
+  }
+
+  .side__item--cta {
+    margin-top: 10px;
+    background: var(--grad-marca);
+    color: var(--acento-cor-texto);
+    border-color: transparent;
+    box-shadow: 0 8px 24px -10px color-mix(in srgb, var(--acento) 85%, transparent);
+  }
+  .side__item--cta i { color: inherit; }
+  .side__item--cta:hover {
+    background: var(--grad-marca);
+    color: var(--acento-cor-texto);
+    filter: brightness(1.08);
+  }
+  /* o CTA mantém o degradê mesmo quando é a rota ativa */
+  .side__item--cta.is-on {
+    background: var(--grad-marca);
+    border-color: transparent;
+    color: var(--acento-cor-texto);
+  }
+  .side__item--cta.is-on i { color: inherit; }
+  .side__item--cta.is-on::before { display: none; }
+
+  /* ---- tema ---- */
+  .side__tema {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: auto;
+    padding: 11px 12px;
+    border-radius: var(--r-btn);
+    border: 1px solid var(--traco);
+    color: var(--tinta-2);
+    font-weight: 600;
+    font-size: .9rem;
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease),
+                border-color var(--dur) var(--ease);
+  }
+  .side__tema i { width: 20px; text-align: center; }
+  .side__tema span { display: none; }
+  .side__tema:hover { background: var(--papel-3); color: var(--tinta); border-color: var(--traco-2); }
+}
+
+@media (min-width: 1080px) {
+  .app { grid-template-columns: var(--side-w) 1fr; }
+  .side { padding: 24px 18px 20px; }
+  .side__logo { display: inline; }
+  .side__logo span { display: inline; }
+  .side__item span, .side__tema span { display: inline; }
+  .side__item { padding: 11px 14px; }
+  .side__item.is-on::before { left: -18px; }
+}
+
+/* -------------------------------------------------------------- tabbar --- */
+.tabbar {
+  position: fixed;
+  inset: auto 10px calc(10px + env(safe-area-inset-bottom)) 10px;
+  z-index: 40;
+  display: flex;
+  justify-content: space-around;
+  gap: 2px;
+  padding: 7px 8px;
+  border-radius: 20px;
+  background: var(--papel-vidro);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid var(--vidro-borda);
+  box-shadow: var(--sombra-l);
+}
+.tabbar__item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 7px 4px 6px;
+  border-radius: 13px;
+  color: var(--tinta-3);
+  font-size: .66rem;
+  font-weight: 600;
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.tabbar__item i { font-size: 1.12rem; }
+.tabbar__item.is-on { color: var(--acento); background: var(--acento-suave); }
+.tabbar__item.is-on::after {
+  content: "";
+  position: absolute;
+  top: 2px; left: 50%;
+  width: 18px; height: 2px;
+  transform: translateX(-50%);
+  border-radius: var(--r-pill);
+  background: var(--grad-marca);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--acento) 80%, transparent);
+}
+.tabbar__item--cta i {
+  background: var(--grad-marca);
+  color: var(--acento-cor-texto);
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 11px;
+  margin-bottom: 1px;
+  box-shadow: 0 6px 18px -6px color-mix(in srgb, var(--acento) 85%, transparent);
+}
+.tabbar__item--cta.is-on { background: none; color: var(--tinta-2); }
+.tabbar__item--cta.is-on::after { display: none; }
+
+@media (min-width: 768px) { .tabbar { display: none; } }
+
+/* body ganha respiro extra p/ player e tabbar não cobrirem conteúdo */
+body.tem-player .tela { padding-bottom: calc(var(--player-h) + 100px); }
+@media (min-width: 768px) {
+  body.tem-player .tela { padding-bottom: calc(var(--player-h) + 44px); }
+}
+
+/* ---------------------------------------------------------------- tela --- */
+.tela {
+  min-width: 0;
+  padding: 20px 16px 110px;
+  max-width: var(--tela-max);
+  margin-inline: auto;
+  width: 100%;
+  animation: sobe-suave var(--dur-l) var(--ease-out) both;
+}
+@media (min-width: 768px)  { .tela { padding: 28px 30px 64px; } }
+@media (min-width: 1080px) { .tela { padding: 34px 48px 76px; } }
+
+.topbar {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--traco);
+}
+/* acento luminoso sob o título */
+.topbar::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 84px; height: 1px;
+  background: var(--grad-marca);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--acento) 70%, transparent);
+}
+.topbar__tit h1 { margin-bottom: 6px; }
+.topbar__tit p {
+  font-family: var(--f-mono);
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--tinta-3);
+}
+.topbar__eu img {
+  width: 36px; height: 36px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--traco-2);
+  object-fit: cover;
+}
+@media (min-width: 768px) { .topbar__eu { display: none; } }
+
+/* Telas compactas: preserva a hierarquia sem deixar títulos e ações competirem. */
+@media (max-width: 479px) {
+  .tela { padding: 18px 14px 108px; }
+  .topbar { align-items: flex-start; gap: 10px; margin-bottom: 18px; padding-bottom: 14px; }
+  .topbar__tit p { font-size: .62rem; letter-spacing: .1em; }
+  .topbar__eu img { width: 32px; height: 32px; }
+  .tabbar { inset-inline: 6px; padding-inline: 4px; border-radius: 17px; }
+  .tabbar__item { padding-inline: 2px; font-size: .59rem; }
+  .tabbar__item--cta i { width: 31px; height: 31px; }
+}
+
+/* grade padrão de conteúdo em 12 colunas p/ telas internas */
+.grade-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+@media (max-width: 767px) { .grade-12 { grid-template-columns: 1fr; } }

@@ -1,0 +1,301 @@
+{
+  "_comment": "Mock de perfis de criadores da ArtLivre. Contrato equivalente a GET /api/v1/artists e /api/v1/artists/{id}. O runtime lê js/data.js (cópia deste conteúdo) para funcionar via file:// sem servidor.",
+  "artists": [
+    {
+      "id": "marina-torres",
+      "nome": "Marina Tôrres",
+      "usuario": "marinatorres",
+      "avatar": "https://picsum.photos/seed/artlivre-marina-avatar/240/240",
+      "banner": "https://picsum.photos/seed/artlivre-marina-banner/1600/520",
+      "categoria": "ilustracao",
+      "cidade": "São Paulo, SP",
+      "especialidades": ["Ilustração editorial", "Folk-futurismo", "Risografia"],
+      "bio": "Ilustro histórias que misturam santeiro de barro, ficção científica e o verde do quintal da minha avó.",
+      "sobre": "Comecei desenhando nas margens dos cadernos da escola em Sorocaba e nunca parei. Hoje trabalho com risografia e pintura digital, atendendo revistas independentes, selos de música e editoras pequenas. A ArtLivre é onde publico o processo inteiro: os rabiscos ruins, as paletas descartadas e as peças que só existem porque alguém aqui decidiu bancar um mês de trabalho tranquilo. Minha meta é fechar 2026 vivendo só de ilustração autoral, sem depender de freela corporativo.",
+      "trajetoria": [
+        { "ano": "2016", "fato": "Primeira fanzine vendida na Feira Plana" },
+        { "ano": "2019", "fato": "Capa para a revista Piseagrama" },
+        { "ano": "2022", "fato": "Residência de risografia no Ateliê Fidalga" },
+        { "ano": "2025", "fato": "Primeiro livro-ilustrado autoral, esgotado em 3 semanas" }
+      ],
+      "redes": {
+        "instagram": "https://instagram.com/marinatorres",
+        "twitter": "https://twitter.com/marinatorres",
+        "behance": "https://behance.net/marinatorres"
+      },
+      "meta": { "alvo": 6000, "atual": 4120, "moeda": "BRL", "descricao": "Meta mensal para dedicar 4 dias por semana só à ilustração autoral." },
+      "apoiadoresAtivos": 148,
+      "visualizacoesPerfil": 9240,
+      "entrouEm": "2023-02-11",
+      "tiers": [
+        {
+          "id": "marina-bronze",
+          "nome": "Caderno de rascunhos",
+          "preco": 10,
+          "cor": "#B8895B",
+          "beneficios": ["Acesso antecipado a rascunhos e estudos de cor", "Feed exclusivo de bastidores toda semana"]
+        },
+        {
+          "id": "marina-prata",
+          "nome": "Nome na tiragem",
+          "preco": 25,
+          "cor": "#8A8F9A",
+          "beneficios": ["Tudo do nível anterior", "Seu nome nos créditos das próximas risografias", "Canal fechado no Discord com lives de processo"]
+        },
+        {
+          "id": "marina-ouro",
+          "nome": "Print do mês",
+          "preco": 50,
+          "cor": "#C9A227",
+          "beneficios": ["Tudo dos níveis anteriores", "Uma arte digital exclusiva em alta resolução por mês", "Bilhete escrito à mão no fim do trimestre"]
+        }
+      ]
+    },
+    {
+      "id": "beto-cravo",
+      "nome": "Beto Cravo",
+      "usuario": "betocravo",
+      "avatar": "https://picsum.photos/seed/artlivre-beto-avatar/240/240",
+      "banner": "https://picsum.photos/seed/artlivre-beto-banner/1600/520",
+      "categoria": "musica",
+      "cidade": "Recife, PE",
+      "especialidades": ["Produção musical", "Manguebeat", "Trilha para dança"],
+      "bio": "Produtor e multi-instrumentista. Faço beats que cheiram a maresia, alfaia e circuito integrado.",
+      "sobre": "Cresci ouvindo maracatu de baque virado no Alto José do Pinho e estudando síntese modular pela madrugada. Produzo para artistas do Norte e Nordeste e componho trilha para companhias de dança contemporânea. Aqui na ArtLivre eu solto faixa nova todo mês antes de qualquer plataforma, mando os stems para quem quer remixar e explico a engenharia por trás de cada mixagem. O apoio recorrente é o que me deixa dizer não para job publicitário que não tem a ver comigo.",
+      "trajetoria": [
+        { "ano": "2015", "fato": "Primeiro EP lançado em CD-R na Rua da Moeda" },
+        { "ano": "2018", "fato": "Trilha para o espetáculo 'Cais' (Grupo Experimental)" },
+        { "ano": "2021", "fato": "Produção do disco 'Enseada', indicado ao Prêmio da Música PE" },
+        { "ano": "2024", "fato": "Turnê por 6 cidades com banda de 7 pessoas" }
+      ],
+      "redes": {
+        "instagram": "https://instagram.com/betocravo",
+        "spotify": "https://open.spotify.com/artist/betocravo",
+        "twitter": "https://twitter.com/betocravo"
+      },
+      "meta": { "alvo": 8000, "atual": 6570, "moeda": "BRL", "descricao": "Meta mensal para manter o estúdio caseiro e pagar cachê justo à banda nas gravações." },
+      "apoiadoresAtivos": 213,
+      "visualizacoesPerfil": 15120,
+      "entrouEm": "2022-09-03",
+      "tiers": [
+        {
+          "id": "beto-bronze",
+          "nome": "Ouvinte de primeira mão",
+          "preco": 10,
+          "cor": "#B8895B",
+          "beneficios": ["Faixa nova todo mês antes das plataformas", "Playlist de referências comentada"]
+        },
+        {
+          "id": "beto-prata",
+          "nome": "Sala de controle",
+          "preco": 25,
+          "cor": "#8A8F9A",
+          "beneficios": ["Tudo do nível anterior", "Stems e projeto para remix", "Live mensal de mixagem com perguntas ao vivo"]
+        },
+        {
+          "id": "beto-ouro",
+          "nome": "Ficha técnica",
+          "preco": 50,
+          "cor": "#C9A227",
+          "beneficios": ["Tudo dos níveis anteriores", "Seu nome na ficha técnica dos próximos lançamentos", "Uma dedicatória em áudio por trimestre"]
+        }
+      ]
+    },
+    {
+      "id": "lia-santanna",
+      "nome": "Lia Sant'Anna",
+      "usuario": "liasantanna",
+      "avatar": "https://picsum.photos/seed/artlivre-lia-avatar/240/240",
+      "banner": "https://picsum.photos/seed/artlivre-lia-banner/1600/520",
+      "categoria": "fotografia",
+      "cidade": "Salvador, BA",
+      "especialidades": ["Retrato documental", "Fotografia de rua", "Analógico 35mm"],
+      "bio": "Fotógrafa documental. Passo os dias no Centro Histórico atrás de luz difícil e gente que ninguém fotografa.",
+      "sobre": "Trabalho com filme desde 2013 porque ele me obriga a esperar. Documento festas populares, feiras e as pessoas que sustentam o Centro de Salvador quando os turistas vão embora. Já expus em coletivas na Bahia e em Portugal, mas o que me interessa mesmo é entregar retrato impresso na mão de quem foi fotografado. O apoio da ArtLivre paga filme, revelação e as viagens curtas para o Recôncavo.",
+      "trajetoria": [
+        { "ano": "2013", "fato": "Primeiro laboratório caseiro montado no banheiro" },
+        { "ano": "2017", "fato": "Ensaio 'Ganhadeiras' publicado na revista ZUM" },
+        { "ano": "2020", "fato": "Exposição individual 'Depois do Coreto'" },
+        { "ano": "2023", "fato": "Livro-objeto artesanal com 40 cópias numeradas" }
+      ],
+      "redes": {
+        "instagram": "https://instagram.com/liasantanna",
+        "behance": "https://behance.net/liasantanna"
+      },
+      "meta": { "alvo": 4500, "atual": 2280, "moeda": "BRL", "descricao": "Meta mensal para cobrir filme, revelação e o projeto de retrato itinerante no Recôncavo." },
+      "apoiadoresAtivos": 74,
+      "visualizacoesPerfil": 5380,
+      "entrouEm": "2023-06-19",
+      "tiers": [
+        {
+          "id": "lia-bronze",
+          "nome": "Contato ampliado",
+          "preco": 10,
+          "cor": "#B8895B",
+          "beneficios": ["Uma folha de contato comentada por mês", "Diário de campo com áudios curtos"]
+        },
+        {
+          "id": "lia-prata",
+          "nome": "Cópia de leitura",
+          "preco": 25,
+          "cor": "#8A8F9A",
+          "beneficios": ["Tudo do nível anterior", "Uma cópia digital em alta a cada mês", "Voto na próxima série documental"]
+        },
+        {
+          "id": "lia-ouro",
+          "nome": "Prova de arquivo",
+          "preco": 50,
+          "cor": "#C9A227",
+          "beneficios": ["Tudo dos níveis anteriores", "Uma cópia impressa fine art por trimestre, enviada pelo correio", "Nome no colofão dos próximos fotolivros"]
+        }
+      ]
+    },
+    {
+      "id": "oficina-carua",
+      "nome": "Oficina Caruá",
+      "usuario": "oficinacarua",
+      "avatar": "https://picsum.photos/seed/artlivre-carua-avatar/240/240",
+      "banner": "https://picsum.photos/seed/artlivre-carua-banner/1600/520",
+      "categoria": "artesanato",
+      "cidade": "Belém, PA",
+      "especialidades": ["Cerâmica marajoara contemporânea", "Fibra de tucumã", "Engobe natural"],
+      "bio": "Ateliê de duas ceramistas amazônidas. Barro do baixo Tocantins, formas que conversam com a arte marajoara.",
+      "sobre": "A Oficina Caruá é a Dora e a Preta, duas ceramistas que dividem um galpão em Icoaraci. Trabalhamos com barro coletado de forma responsável e pigmentos de terra da região. Reinterpretamos grafismos marajoaras em peças utilitárias: canecas, alguidares, luminárias. Cada apoio mensal vira hora de forno e material para as oficinas gratuitas que damos para adolescentes do bairro.",
+      "trajetoria": [
+        { "ano": "2017", "fato": "Primeiro forno a gás construído no quintal" },
+        { "ano": "2019", "fato": "Participação no Salão do Artesanato do Pará" },
+        { "ano": "2022", "fato": "Linha de luminárias em fibra de tucumã esgotada na pré-venda" },
+        { "ano": "2025", "fato": "Oficina gratuita formou a primeira turma de 12 jovens" }
+      ],
+      "redes": {
+        "instagram": "https://instagram.com/oficinacarua"
+      },
+      "meta": { "alvo": 5500, "atual": 3960, "moeda": "BRL", "descricao": "Meta mensal para bancar as oficinas gratuitas do bairro e a queima coletiva mensal." },
+      "apoiadoresAtivos": 96,
+      "visualizacoesPerfil": 4110,
+      "entrouEm": "2023-11-02",
+      "tiers": [
+        {
+          "id": "carua-bronze",
+          "nome": "Diário do forno",
+          "preco": 10,
+          "cor": "#B8895B",
+          "beneficios": ["Registro em vídeo de cada queima", "Ficha técnica das misturas de engobe"]
+        },
+        {
+          "id": "carua-prata",
+          "nome": "Roda de barro",
+          "preco": 25,
+          "cor": "#8A8F9A",
+          "beneficios": ["Tudo do nível anterior", "Aula gravada de técnica por mês", "Prioridade na lista de espera das peças"]
+        },
+        {
+          "id": "carua-ouro",
+          "nome": "Peça da estante",
+          "preco": 50,
+          "cor": "#C9A227",
+          "beneficios": ["Tudo dos níveis anteriores", "Uma peça pequena feita à mão por trimestre", "Seu nome gravado no mural do ateliê"]
+        }
+      ]
+    },
+    {
+      "id": "nuno-prado",
+      "nome": "Nuno Prado",
+      "usuario": "nunoprado",
+      "avatar": "https://picsum.photos/seed/artlivre-nuno-avatar/240/240",
+      "banner": "https://picsum.photos/seed/artlivre-nuno-banner/1600/520",
+      "categoria": "design",
+      "cidade": "Porto Alegre, RS",
+      "especialidades": ["Tipografia de exibição", "Cartaz cultural", "Identidade visual"],
+      "bio": "Designer gráfico e desenhista de tipos. Faço cartaz de show, fonte de encomenda e sistema visual para gente pequena.",
+      "sobre": "Trabalho sozinho num escritório de 9 m² no bairro Cidade Baixa. Metade do meu tempo é cartaz para casas de show independentes; a outra metade é desenho de tipos por encomenda. Publico aqui os arquivos-fonte, os specimens em progresso e os cartazes em resolução de impressão para quem quiser pregar na parede. O apoio recorrente me deixa cobrar preço honesto de coletivo cultural sem passar aperto no fim do mês.",
+      "trajetoria": [
+        { "ano": "2014", "fato": "Primeira fonte publicada, a 'Guaíba Grotesk'" },
+        { "ano": "2018", "fato": "Cartazes para o festival Nthrop, 3 edições seguidas" },
+        { "ano": "2021", "fato": "Identidade visual da editora Arquipélago" },
+        { "ano": "2024", "fato": "Specimen impresso 'Minuano', 200 cópias risografadas" }
+      ],
+      "redes": {
+        "instagram": "https://instagram.com/nunoprado",
+        "behance": "https://behance.net/nunoprado",
+        "twitter": "https://twitter.com/nunoprado"
+      },
+      "meta": { "alvo": 5000, "atual": 5230, "moeda": "BRL", "descricao": "Meta mensal batida: agora o excedente vira bolsa de impressão para cartaz de coletivo sem verba." },
+      "apoiadoresAtivos": 121,
+      "visualizacoesPerfil": 7890,
+      "entrouEm": "2022-12-08",
+      "tiers": [
+        {
+          "id": "nuno-bronze",
+          "nome": "Prova de página",
+          "preco": 10,
+          "cor": "#B8895B",
+          "beneficios": ["Specimens e estudos de letra em PDF toda semana", "Wallpaper tipográfico mensal"]
+        },
+        {
+          "id": "nuno-prata",
+          "nome": "Arquivo aberto",
+          "preco": 25,
+          "cor": "#8A8F9A",
+          "beneficios": ["Tudo do nível anterior", "Cartaz do mês em resolução de impressão (CMYK)", "Licença de uso pessoal das fontes em beta"]
+        },
+        {
+          "id": "nuno-ouro",
+          "nome": "Mesa de luz",
+          "preco": 50,
+          "cor": "#C9A227",
+          "beneficios": ["Tudo dos níveis anteriores", "Um cartaz risografado enviado pelo correio por trimestre", "Uma hora de consultoria de tipografia por semestre"]
+        }
+      ]
+    },
+    {
+      "id": "clarice-vidal",
+      "nome": "Clarice Vidal",
+      "usuario": "claricevidal",
+      "avatar": "https://picsum.photos/seed/artlivre-clarice-avatar/240/240",
+      "banner": "https://picsum.photos/seed/artlivre-clarice-banner/1600/520",
+      "categoria": "literatura",
+      "cidade": "Belo Horizonte, MG",
+      "especialidades": ["Ficção seriada", "Conto fantástico", "Fanzine literária"],
+      "bio": "Escritora. Publico um conto por quinzena e monto zines literárias que ninguém pediu, mas todo mundo acaba querendo.",
+      "sobre": "Sou escritora e trabalho de manhã cedo, antes de todo mundo acordar. Escrevo ficção fantástica ambientada numa Belo Horizonte que quase existe: linhas de ônibus que somem, prédios que trocam de endereço. Aqui na ArtLivre publico um conto novo a cada quinze dias, mando o processo de revisão comentado e imprimo uma zine física por trimestre. O apoio mensal é o que substitui o emprego das 9 às 18 que larguei em 2023.",
+      "trajetoria": [
+        { "ano": "2018", "fato": "Primeiro conto premiado no concurso da Biblioteca Pública" },
+        { "ano": "2020", "fato": "Coletânea 'Linhas Mortas' publicada por editora independente" },
+        { "ano": "2023", "fato": "Larguei o emprego CLT para escrever em tempo integral" },
+        { "ano": "2025", "fato": "Série 'O Bairro que Anda' passou de 2.000 leitores por capítulo" }
+      ],
+      "redes": {
+        "instagram": "https://instagram.com/claricevidal",
+        "twitter": "https://twitter.com/claricevidal"
+      },
+      "meta": { "alvo": 4000, "atual": 1740, "moeda": "BRL", "descricao": "Meta mensal para manter a rotina de escrita integral e a impressão trimestral das zines." },
+      "apoiadoresAtivos": 58,
+      "visualizacoesPerfil": 3620,
+      "entrouEm": "2024-01-27",
+      "tiers": [
+        {
+          "id": "clarice-bronze",
+          "nome": "Assinante da série",
+          "preco": 10,
+          "cor": "#B8895B",
+          "beneficios": ["Um conto novo a cada quinzena, em PDF e ePub", "Bastidores do processo de escrita por e-mail"]
+        },
+        {
+          "id": "clarice-prata",
+          "nome": "Mesa de revisão",
+          "preco": 25,
+          "cor": "#8A8F9A",
+          "beneficios": ["Tudo do nível anterior", "Versão comentada mostrando o que foi cortado", "Voto no rumo da série a cada arco"]
+        },
+        {
+          "id": "clarice-ouro",
+          "nome": "Tiragem de papel",
+          "preco": 50,
+          "cor": "#C9A227",
+          "beneficios": ["Tudo dos níveis anteriores", "A zine impressa enviada pelo correio a cada trimestre", "Uma personagem secundária batizada com o nome que você escolher"]
+        }
+      ]
+    }
+  ]
+}
