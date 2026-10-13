@@ -381,9 +381,17 @@ mídia, transcodificação de áudio, e-mail transacional, antifraude e busca).
 
 ## Equipe do Projeto
 
-| Nome | Função | Contato |
-|---|---|---|
-| A ser definido pela equipe | A ser definido pela equipe | A ser definido pela equipe |
+| Nome | Função |
+|---|---|
+| Hudson Neves | Product Owner (PO) |
+| Gabriel Lima | Scrum Master |
+| Alexandre Brito | Programador |
+| Arthur Vieira | Programador |
+| Davi Ribeiro | Programador |
+| Felipe Oliveira | Programador |
+| Gabriel Abu | Programador |
+| Igor Eduardo | Programador |
+| Luiz Gabriel Souza | Programador |
 
 ---
 
