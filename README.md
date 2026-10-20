@@ -26,13 +26,13 @@ Vitrine de portfólios e apoio financeiro a artistas independentes brasileiros.
 |---|---|
 | Hudson Neves | Product Owner (PO) |
 | Gabriel Lima | Scrum Master |
-| Alexandre Brito | Programador |
-| Arthur Vieira | Programador |
-| Davi Ribeiro | Programador |
-| Felipe Oliveira | Programador |
-| Gabriel Abu | Programador |
-| Igor Eduardo | Programador |
-| Luiz Gabriel Souza | Programador |
+| Alexandre Brito | Programador (Backend)|
+| Arthur Vieira | Programador (Frontend)|
+| Davi Ribeiro | Programador (Frontend)|
+| Felipe Oliveira | Programador (Frontend)|
+| Gabriel Abu | Programador (Backend)|
+| Igor Eduardo | Programador (Backend)|
+| Luiz Gabriel Souza | Programador (Backend)|
 
 ---
 
